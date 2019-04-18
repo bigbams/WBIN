@@ -134,7 +134,7 @@ a:hover {
   }
   @media only screen and (max-width: 600px) {
     .header .header-slider {
-      height: 350px
+      height: 250px
     }
   }
   .header .header-slider img {
