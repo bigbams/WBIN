@@ -55,8 +55,10 @@ ul, li {
   color: #fff;
   border: 1px solid #FFF;
 }
-
 a {
+  text-decoration: none;
+}
+a:hover {
   text-decoration: none;
 }
 
@@ -92,10 +94,21 @@ a {
   .header .header-quick div:nth-child(3) ul li > a {
     color: #ec3892;
   }
+  @media only screen and (max-width: 600px) {
+    .header .header-quick div:nth-child(1), 
+    .header .header-quick div:nth-child(3) {
+      display: none;
+    }
+  }
   .header .header-nav {
     padding: 0 7rem;
     display: flex;
     background: linear-gradient(0deg, rgba(236, 56, 146, 0.6), rgba(236, 56, 146, 0.6)), url('assets/header-nav-banner.svg');
+  }
+  @media only screen and (max-width: 600px) {
+    .header .header-nav {
+      padding: 0 1rem;
+    }
   }
   .header .header-nav ul {
     flex: 1;
@@ -103,6 +116,12 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 3rem 0.6rem;
+  }
+  @media only screen and (max-width: 300px) {
+    .header .header-nav ul {
+      padding: 0 .5rem !important;
+      flex-direction: column;
+    }
   }
   .header .header-nav ul li a {
     text-transform: uppercase;
@@ -112,6 +131,11 @@ a {
   }
   .header .header-slider {
     height: 500px;
+  }
+  @media only screen and (max-width: 600px) {
+    .header .header-slider {
+      height: 350px
+    }
   }
   .header .header-slider img {
     width: 100%;
@@ -134,7 +158,6 @@ a {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -161,6 +184,15 @@ a {
   .header .header-slider .swiper-slide div p {
     font-size: 20px;
   }
+  @media only screen and (max-width: 600px) {
+    .header .header-slider .swiper-slide div p {
+      font-size: 14px;
+    }
+    .header .header-slider .swiper-slide div  {
+      width: 100%;
+      left: .3rem;
+    }
+  }
   .header .header-slider .swiper-slide div h3.subtext {
     text-align: left;
     color: #fff;
@@ -183,6 +215,14 @@ a {
   }
   .catch-up .card .card-img.last {
     height: 600px;
+  }
+  @media only screen and (max-width: 600px) {
+    .catch-up .card .card-img:not(.last) {
+      height: 150px;
+    }
+    .catch-up .card .card-img.last {
+      height: 150px;
+    }
   }
   .catch-up .card .card-img .card-text {
     position: absolute;
@@ -215,6 +255,11 @@ a {
     text-align: center;
     font-size: 24px;
     color: #3a3a3a;
+  }
+  @media only screen and (max-width: 600px) {
+    .directory .row p {
+      font-size: 13px;
+    }
   }
   .directory .row:nth-child(2) .card {
     padding: 1.4rem 0 0.8rem;
@@ -318,6 +363,17 @@ a {
     justify-content: space-between;
     font-size: 12px;
     font-weight: bold;
+  }
+  @media only screen and (max-width: 600px) {
+    .blog .card .card-body .card-title {
+      font-size: 15px
+    }
+    .blog .card .card-body p {
+      font-size: 12px;
+    }
+  .blog .card .card-body .bottom {
+flex-direction: column;
+  }
   }
   .vendors {
     padding: 3rem 0;
